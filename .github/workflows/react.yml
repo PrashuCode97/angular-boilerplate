@@ -13,7 +13,11 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '20.3.0'
-      - name: Build
+      - name: Install packages
         run: |
           cd myreactapp
           npm i
+      - name: Build app
+        run: |
+          cd myreactapp
+          npm run build
